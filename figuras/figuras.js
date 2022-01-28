@@ -6,10 +6,10 @@ console.log(`Los lados del cuadrado miden: ${ladoCuadrado}cm`);
 
 perimetroCuadrado = (ladoCuadrado) => ladoCuadrado * 4
 
-console.log("Batman" + perimetroCuadrado(5));
+console.log(`El perímetro del cuadrado es de: ${perimetroCuadrado(ladoCuadrado)}cm`);
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log(`El área del cuadrado es de: ${areaCuadrado}cm²`);
+areaCuadrado = (ladoCuadrado) => Math.pow(ladoCuadrado, 2);
+console.log(`El área del cuadrado es de: ${areaCuadrado(ladoCuadrado)}cm²`);
 
 console.groupEnd();
 
@@ -20,12 +20,15 @@ const ladoTriangulo1 = 6;
 const ladoTriangulo2 = 6;
 const baseTriangulo = 4;
 
+
 console.log(`Los lados del triángulo miden: ${ladoTriangulo1}cm, ${ladoTriangulo2}cm y ${baseTriangulo}cm`);
 
 const alturaTriangulo = 5.5;
 console.log(`La altura del triángulo es de ${alturaTriangulo}cm`);
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
+perimetroTriangulo = (ladoTriangulo1, ladoTriangulo2, baseTriangulo) => {
+    return ladoTriangulo1 + ladoTriangulo2 + baseTriangulo
+};
 console.log(`El perímetro del triángulo es de ${perimetroTriangulo}`);
 
 const areaTriangulo = (baseTriangulo * alturaTriangulo)/2
